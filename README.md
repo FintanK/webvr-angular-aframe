@@ -18,7 +18,7 @@ In the root directory..
 
 - npm install
 - bower install
-- node server.js
+- npm start
 
 The project will then be available locally on http://localhost:3000
 
