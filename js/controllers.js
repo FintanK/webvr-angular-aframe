@@ -74,9 +74,12 @@ vrControllers.controller('MainMenuCtrl', ['$scope', '$http', '$routeParams',
 vrControllers.controller('ImageCtrl', ['$scope', '$routeParams',
   function ($scope, $routeParams) {
 
+  $scope.loading = true;
+
   var scene = document.querySelector('a-scene');
   if (scene) {
     if (scene.hasLoaded) {
+      $scope.loading = false;
       scene.enterVR();
     } else {
       scene.addEventListener('loaded', scene.enterVR);
@@ -96,9 +99,12 @@ vrControllers.controller('ImageCtrl', ['$scope', '$routeParams',
 vrControllers.controller('VideoCtrl', ['$scope', '$routeParams',
   function ($scope, $routeParams) {
 
+  $scope.loading = true;
+
   var scene = document.querySelector('a-scene');
   if (scene) {
     if (scene.hasLoaded) {
+      $scope.loading = false;
       scene.enterVR();
     } else {
       scene.addEventListener('loaded', scene.enterVR);
